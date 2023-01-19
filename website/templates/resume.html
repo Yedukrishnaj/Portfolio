@@ -1,0 +1,251 @@
+{% extends "base.html" %} {% block title %}Resume{% endblock %}
+{% block content%}
+<div class="resume" style="display: flex">
+<h3>My Resume</h3>
+</div>
+<div class="container">
+     <!-- Code for Bootsrap Accordion
+  taken from Codepen.io by Khajan
+  accessed 15-01-2023
+  https://codepen.io/kbsnr02/pen/LYNMyzP-->
+    <div class="accordion" id="accordionExample">
+      <div class="item">
+         <div class="item-header" id="headingOne">
+            <h2 class="mb-0">
+               <button class="btn btn-link" type="button" data-toggle="collapse"
+                  data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Education
+               <i class="fa fa-angle-down"></i>
+               </button>
+            </h2>
+         </div>
+         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+            data-parent="#accordionExample">
+            <div class="t-p">
+                <ul>
+                <li>MSc in Computing and IT Management<br>
+                    Cardiff University<p style="float: right;">2022 - Present</p></li>
+                <li>Bachelor of Technology in Computer Science and Engineering<br>
+                    APJ Abdul Kalam Technological University<br>
+                    CGPA:8.39<p style="float: right;">2018 - 2022</p></li>
+                </ul>
+            </div>
+         </div>
+      </div>
+      <div class="item">
+         <div class="item-header" id="headingTwo">
+            <h2 class="mb-0">
+               <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Projects
+               <i class="fa fa-angle-down"></i>
+               </button>
+            </h2>
+         </div>
+         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+            data-parent="#accordionExample">
+            <div class="t-p">
+<!-- Code for Bootsrap Cards
+  taken from Codepen.io by Nikki Peel
+  accessed 18-01-2023
+  https://codepen.io/nikki-peel/pen/RwavQer-->
+    
+<div class="container mx-auto mt-6">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+    <img src="{{ url_for('static', filename='pexels-pixabay-247676.jpg') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Clickbait Detection in YouTube Videos</h5>
+          
+      <p class="card-text">Experimentation to extract features using different learning algorithms
+        which can classify YouTube videos either as Clickbait or non-Clickbait using performance
+        parameters</p>
+         <a href="#" class="butn mr-2"><i class="fas fa-link"></i>Read More</a>
+      <a href="#" class="butn "><i class="fab fa-github"></i> Github</a>
+    </div>
+    </div>
+      </div>    
+         
+         <div class="col-md-4">
+  <div class="card" style="width: 18rem;">
+    <img src="{{ url_for('static', filename='pexels-pixabay-247676.jpg') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">The Golden Sun</h5>
+          
+      <p class="card-text">A tower building strategic video game using Unity</p>
+      <a href="#" class="butn mr-2"><i class="fas fa-link"></i>Read More</a>
+      <a href="#" class="butn"><i class="fab fa-github"></i> Github</a>
+    </div>
+    </div>
+      </div>    
+            <div class="col-md-4">
+  <div class="card" style="width: 18rem;">
+    <img src="{{ url_for('static', filename='pexels-pixabay-247676.jpg') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Alcohol Detection System in Vehicles</h5>
+       
+      <p class="card-text">A System using Arduino Uno and MQ3 Sensor that detects the presence of Alcohol and
+        cuts off the Motor in Vehicles.</p>
+      <a href="#" class="butn mr-2"><i class="fas fa-link"></i> Read More</a>
+      <a href="#" class="butn"><i class="fab fa-github"></i> Github</a>
+    </div>
+    </div>
+    </div>
+      
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+    <img src="{{ url_for('static', filename='pexels-pixabay-247676.jpg') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Hotel Booking Application</h5>
+
+      <p class="card-text">Hotel booking application using Android Studio and
+        HTML5.</p>
+         <a href="#" class="butn mr-2"><i class="fas fa-link"></i> Read More</a>
+      <a href="#" class="butn"><i class="fab fa-github"></i> Github</a>
+    </div>
+    </div>
+      </div>    
+            
+           
+      
+  </div>
+    </div>
+
+            </div>
+         </div>
+      </div>
+      <div class="item">
+         <div class="item-header" id="headingThree">
+            <h2 class="mb-0">
+               <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseThree" aria-expanded="false"
+                  aria-controls="collapseThree">
+                  Experience
+               <i class="fa fa-angle-down"></i>
+               </button>
+            </h2>
+         </div>
+         <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+            data-parent="#accordionExample">
+            <div class="t-p">
+                Student Intern at
+                Kwicklab InfoTech<br>
+                •Learned to develop mobile applications in Android Studio using Java and HTML.<br>
+                •Studied the working and implementation of databases in Android apps using SQLite.
+            </div>
+         </div>
+      </div>
+      <div class="item">
+         <div class="item-header" id="headingFour">
+            <h2 class="mb-0">
+               <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseFour" aria-expanded="false"
+                  aria-controls="collapseFour">
+                  External Qualifications
+               <i class="fa fa-angle-down"></i>
+               </button>
+            </h2>
+         </div>
+         <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+            data-parent="#accordionExample">
+            <div class="t-p">
+               <ul>
+                <li>Finished a course on Google cloud platform which contained 5 quests that QwikLabs, in
+                    collaboration with Google, had to offer.</li>
+                <li>Attended workshop in 3D game designing organised by
+                    Robocart.com in association with
+                    innovation cell -cell UMIC, IIT
+                    Bombay.</li>
+                <li>Completed online training on the Intel® Distribution of OpenVINO Toolkit delivered online by
+                    the Intel OpenVINO Training Team in collaboration with Intel.</li>
+                <li>Attended a workshop on Deep Learning conducted as a part of
+                    TATHVA’21, the annual
+                    techno-managerial fest of National
+                    Institute of Technology, Calicut.</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="item">
+        <div class="item-header" id="headingFive">
+           <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                 data-target="#collapseFive" aria-expanded="false"
+                 aria-controls="collapseFive">
+                 Technical Skills
+              <i class="fa fa-angle-down"></i>
+              </button>
+           </h2>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+           data-parent="#accordionExample">
+           <div class="t-p">
+            <div class="row d-flex justify-content-center mt-50">
+
+                <div class="col-md-12">
+        
+         <!-- Code for Skill Progress Bar
+  taken from bbbootstrap.com by bbbootstrap62244
+  accessed 15-01-2023
+  https://bbbootstrap.com/snippets/circle-progress-bar-percent-loading-81242857-->
+                    <div class="progress red">
+                        <span class="progress-left">
+                                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">HTML/CSS</div>
+                      </div>
+        
+                    <div class="progress blue">
+                      <span class="progress-left">
+                                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                      </span>
+                      <div class="progress-value">Python,C</div>
+                    </div>
+        
+                    <div class="progress blue">
+                        <span class="progress-left">
+                                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">JavaScript</div>
+                      </div>
+        
+                      <div class="progress green">
+                        <span class="progress-left">
+                                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">Java,SQL</div>
+                      </div>
+                    
+                    
+        
+        
+                   
+                </div>
+               
+            </div>
+            <p>
+                Other Skills:
+                 Jupyter Notebook, Unity, FL
+                Studio, VS Code and PHP.
+               </p>
+           </div>
+           
+        </div>
+     </div>
+    </div>
+    </div>
+    <a style="color: aliceblue;" id="Resume" href="{{ url_for('static', filename='Yedukrishna_CV.pdf') }}" download>Click here to download Resume as a Document</a>
+{% endblock %}

@@ -1,0 +1,568 @@
+
+* {
+  margin:0;
+  padding:0;
+}
+title{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
+body{
+  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer{
+  height: 25px;
+  color: white;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main{
+  height:70vh;
+  width:100%;  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+h1{
+  text-align:center;
+  text-transform: uppercase;
+  color: #F1FAEE; 
+  font-size: 4rem;
+}
+
+.roller{
+  height: 4.125rem;
+  line-height: 4rem;
+  position: relative;
+  overflow: hidden; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color: #1D3557;
+}
+
+
+#spare-time{
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 1rem;
+  margin-top: 0;
+  color: #A8DADC;
+  
+}
+
+.roller #rolltext {
+  position: absolute;
+  top: 0;
+  animation: slide 5s infinite;  
+}
+
+@keyframes slide {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -4rem;    
+  }
+  50%{
+    top: -8rem;
+  }
+  72.5%{
+    top: -12.25rem;
+  }
+}
+
+@media screen and (max-width: 600px){
+  h1{
+  text-align:center;
+  text-transform: uppercase;
+  color: #F1FAEE; 
+  font-size: 2.125rem;
+}
+  
+  .roller{
+  height: 2.6rem; 
+  line-height: 2.125rem;  
+  }
+  
+  #spare-time {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  .roller #rolltext {  
+  animation: slide-mob 5s infinite;  
+}
+  
+  @keyframes slide-mob {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -2.125rem;    
+  }
+  50%{
+    top: -4.25rem;
+  }
+  72.5%{
+    top: -6.375rem;
+  }
+}
+}
+
+/* Code for City Lights Text Effect
+taken from codepen.io by Philip Zastrow
+accessed 15-01-2023
+https://codepen.io/zastrow/pen/PoJmzGJ */
+
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+  30% { 
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  40% { 
+    color: hsl(230, 100%, 95%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+}
+
+
+h3 {
+  margin: auto;
+  font-size: 3rem;
+  font-weight: 300;
+  animation: lights 5s 750ms linear infinite;
+}
+
+.accordion{
+  margin: 40px 0;
+}
+.accordion .item {
+    border: none;
+    margin-bottom: 50px;
+    background: none;
+}
+.t-p{
+  color: rgb(193 206 216);
+  padding: 40px 30px 0px 30px;
+}
+.accordion .item .item-header h2 button.btn.btn-link {
+    background: #4f1cbd;
+    color: white;
+    border-radius: 0px;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.5;
+    text-decoration: none;
+}
+.accordion .item .item-header {
+    border-bottom: none;
+    background: transparent;
+    padding: 0px;
+    margin: 2px;
+}
+
+.accordion .item .item-header h2 button {
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.accordion .item .item-header h2 i {
+    float: right;
+    font-size: 30px;
+    color: #eca300;
+    background-color: black;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+button.btn.btn-link.collapsed i {
+    transform: rotate(0deg);
+}
+
+button.btn.btn-link i {
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+
+
+.mt-100{
+  margin-top: 200px;
+}
+.progress {
+  width: 150px;
+  height: 150px !important;
+  float: left; 
+  line-height: 150px;
+  background: none;
+  margin: 20px;
+  box-shadow: none;
+  position: relative;
+}
+.progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress>span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left {
+  left: 0;
+}
+.progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right {
+  right: 0;
+}
+.progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+.progress .progress-value {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: #000;
+  font-size: 24px;
+  color: #fff;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.progress.blue .progress-bar {
+  border-color: #049dff;
+}
+.progress.blue .progress-left .progress-bar {
+  animation: loading-2 1.5s linear forwards 1.8s;
+}
+.progress.yellow .progress-bar {
+  border-color: #fdba04;
+}
+.progress.yellow .progress-right .progress-bar {
+  animation: loading-3 1.8s linear forwards;
+}
+.progress.yellow .progress-left .progress-bar {
+  animation: none;
+}
+.progress.red .progress-bar {
+  border-color: #ff0404;
+}
+.progress.red .progress-left .progress-bar {
+  animation: loading-1 1.5s linear forwards 1.7s;
+}
+.progress.green .progress-bar {
+  border-color: #04ff43;
+}
+.progress.green .progress-left .progress-bar {
+  animation: loading-4 1.5s linear forwards 1.7s;
+}
+@keyframes loading-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+@keyframes loading-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(144deg);
+    transform: rotate(144deg);
+  }
+}
+@keyframes loading-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+}
+@keyframes loading-4 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+/* Code for Text Hover Effect
+taken from codepen.io by Noah Raskin
+accessed 15-01-2023
+https://codepen.io/noahraskin/pen/abENVwL */
+
+
+h4 {
+  --s: 0.1em;   /* the thickness of the line */
+  --c: #0a0a0a; /* the color */
+  
+  color: #0000;
+  padding-bottom: var(--s);
+  background: 
+    linear-gradient(90deg,var(--c) 50%,rgb(255, 255, 255,0.5) 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: 0.5s;
+}
+h4:hover {--_p: 100%}
+
+
+h4 {
+  font-family: system-ui, sans-serif;
+  cursor: pointer;
+}
+
+@keyframes bg {
+  0% {
+      background-size:    0 3px,
+                          3px 0,
+                          0 3px,
+                          3px 0;
+  }
+  25% {
+      background-size:    100% 3px,
+                          3px 0,
+                          0 3px,
+                          3px 0;
+  }
+  50% {
+      background-size:    100% 3px,
+                          3px 100%,
+                          0 3px,
+                          3px 0;
+  }
+  75% {
+      background-size:    100% 3px,
+                          3px 100%,
+                          100% 3px,
+                          3px 0;
+  }
+  100% {
+      background-size:    100% 3px,
+                          3px 100%,
+                          100% 3px,
+                          3px 100%;
+  }
+}
+
+/* Code for Border Animation
+taken from codepen.io by paolo cavanna
+accessed 15-01-2023
+https://codepen.io/paolocavanna/pen/qNKryX */
+
+
+.AboutMe {
+  margin: 2rem auto;
+  padding: 2em;
+  
+  background-repeat: no-repeat;
+  background-image:   linear-gradient(to right, #C9C9C9 100%, #C9C9C9 100%),
+                      linear-gradient(to bottom, #C9C9C9 100%, #C9C9C9 100%),
+                      linear-gradient(to right, #C9C9C9 100%, #C9C9C9 100%),
+                      linear-gradient(to bottom, #C9C9C9 100%, #C9C9C9 100%);
+  background-size:    100% 3px,
+                      3px 100%,
+                      100% 3px,
+                      3px 100%;
+  background-position:    0 0,
+                          100% 0,
+                          100% 100%,
+                          0 100%;
+  animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+  animation-play-state: paused;
+}
+
+div:hover {
+  animation-play-state: running;
+}
+
+#client-testimonial-carousel {min-height: 200px;}
+
+
+h1 {
+  margin-bottom: 40px;
+}
+
+label {
+  color: #333;
+}
+
+.btn-send {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  width: 80%;
+  margin-left: 3px;
+  }
+.help-block.with-errors {
+  color: #ff5050;
+  margin-top: 5px;
+
+}
+
+.card{
+margin-left: 10px;
+margin-right: 10px;
+}
+
+.photo {
+  --color: #FA6900; /* the color of the border */
+  --border: 5px;   /* the thickness of the border */
+  --offset: 30px;   /* control the movement of the border */
+  --gap: 5px;       /* the gap on hover */
+  float: left;
+  margin-top: -50px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: calc(var(--border) + var(--gap));
+  border: var(--offset) solid #0000;
+  --_m: radial-gradient(50% 50%, #000 calc(100% - var(--offset)),#0000 calc(100% - var(--border)));
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  --_g: #0000 calc(99% - var(--border)), var(--color) calc(100% - var(--border)) 99%,#0000;
+  --_s: var(--offset);
+  --_r: 100% 100% at;
+  background:
+    radial-gradient(var(--_r) 0    0   ,var(--_g)) calc(100% + var(--_s)) calc(100% + var(--_s)),
+    radial-gradient(var(--_r) 100% 0   ,var(--_g)) calc(0%   - var(--_s)) calc(100% + var(--_s)),
+    radial-gradient(var(--_r) 0    100%,var(--_g)) calc(100% + var(--_s)) calc(0%   - var(--_s)),
+    radial-gradient(var(--_r) 100% 100%,var(--_g)) calc(0%   - var(--_s)) calc(0%   - var(--_s));
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  transition: .4s;
+}
+.photo:hover {
+  --_s: 0px
+}
+
+:root {
+  --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+}
+
+
+
+.card {
+  background: #222;
+  border: 1px solid #dd2476;
+  color: rgba(250, 250, 250, 0.8);
+  margin-bottom: 2rem;
+}
+
+.butn {
+  border: 5px solid;
+  border-image-slice: 1;
+  background-clip: border-box;
+  background: var(--gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  border-image-source:  var(--gradient) !important; 
+  text-decoration: none;
+  transition: all .4s ease;
+}
+
+.butn:hover, .butn:focus {
+      background: var(--gradient) !important;
+      background-clip: border-box;
+  -webkit-background-clip: none !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 5px solid #fff !important; 
+  box-shadow: #222 1px 0 10px;
+  text-decoration: underline;
+}
