@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %}Report{% endblock %}
+{% block content%}
+<iframe
+    src="{{ url_for('static', filename='CLickbait.pdf') }}"
+frameBorder="0"
+scrolling="auto"
+height="200%"
+width="100%"
+></iframe>
+{% endblock %}
