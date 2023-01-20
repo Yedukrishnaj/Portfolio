@@ -1,8 +1,8 @@
-# from website import app as application
+from website import app as application
 
 
-from website import app
+# from website import app
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
