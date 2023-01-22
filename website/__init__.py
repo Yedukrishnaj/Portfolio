@@ -37,9 +37,3 @@ login_manager.init_app(app)
 def load_user(id):
     return User.query.get(int(id))
 
-
-
-def create_database(app):
-    if not path.exists('website/' + DB_NAME):
-        db.create_all(app=app)
-        print('Created Database!')
